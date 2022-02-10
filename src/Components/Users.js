@@ -33,11 +33,10 @@ export default function Users(props) {
       {Object.keys(userlist).map((id)=>{
           if(userlist[id].email !== currentUser.email ){
           return (
-          <div>
-          <MenuItem key={userlist[id].uid}><b className='float-left'>{userlist[id].username}</b> &nbsp; &nbsp;
+          <div key={userlist[id].uid}>
+          <MenuItem ><b className='float-left'>{userlist[id].username}</b> &nbsp; &nbsp;
           <Button className="btn btn-primary btn-sm float-right"  onClick={() => setModalShow(true)}> Add Event
          </Button>
-         {console.log(userlist[id].uid)}
          <OtherUsersEventAdder
           user={userlist[id].uid}
           show={modalShow}

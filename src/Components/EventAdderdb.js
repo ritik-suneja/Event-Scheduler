@@ -12,9 +12,9 @@ export default function Users(props) {
   return (
   <div>
       <Button variant="primary" style={{width:"90%"}} onClick={() => setModalShow(true)}>
-    Add Item +
+    Add Event
     </Button>
-
+    
     <EventAdder
     show={modalShow}
     onHide={() => setModalShow(false)}

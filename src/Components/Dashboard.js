@@ -63,6 +63,7 @@ export default function Dashboard() {
     <>
       
       <Navbar />
+
       <div
         className="container-fluid"
         style={{ margin: "0px", padding: "0px" }}
@@ -78,6 +79,7 @@ export default function Dashboard() {
                 <MenuItem>
                  <h4 style={{ textAlign: "center" }}><b>User Details:</b></h4>
                  <h6 style={{ textAlign: "center" }}><b>{currentUser.email}</b></h6>
+                 
                 </MenuItem>
                 <hr></hr>
                 <SubMenu title={<b >ADD EVENTS</b>}>
@@ -88,6 +90,7 @@ export default function Dashboard() {
                   <Users/>
                 </SubMenu>
                 <hr></hr>
+                <MenuItem style={{ textAlign: "center" }}><small>[Click on the events to delete them!!]</small></MenuItem>
                 
               </Menu>
             </ProSidebar>
@@ -111,8 +114,6 @@ export default function Dashboard() {
               defaultView={Views.WEEK}
               onSelectEvent={handleSelect}
               eventPropGetter={(event) => {
-                //rgb(2, 194, 163)
-                //const backgroundColor = "#000000".replace(/0/g,function(){return (~~(Math.random()*16)).toString(16);});
                 var style = {
                   backgroundColor: 'rgb(2, 194, 163)',
                   borderRadius: '2px',

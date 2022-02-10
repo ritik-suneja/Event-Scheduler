@@ -8,7 +8,6 @@ import { actionCreators } from "../state/index";
 import { bindActionCreators } from "redux";
 import {fireDB} from "../firebase";
 import DateTimePicker from 'react-datetime-picker';
-import { Alert } from "react-bootstrap";
 
 
 export default function OtherUsersEventAdder(props) {
